@@ -10,6 +10,7 @@
   "dependencies": {
     "json-server": "^0.14.2",
     "vue": "^2.5.22",
+    "vue-axios": "^2.1.4",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
