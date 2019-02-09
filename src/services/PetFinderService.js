@@ -1,31 +1,19 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: `http://api.petfinder.com`,
-  withCredentials: false, // This is the default
-  headers: {
-    'Access-Control-Allow-Origin': '*',
-    'Content-Type': 'application/json'
-  }
+  baseURL: `https://pokeapi.co/api/v2/`,
+  withCredentials: false // This is the default
 });
 
 export default {
-  // Get a list of all or alot of pets
+  // Get a list of all pets
   getPets() {
-    return apiClient.get('/pets');
+    return apiClient.get('pokemon/?limit=1000'); // "https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20"
   },
-  // Get a random pet ID
-  // /pet.getRandom?format=json&key=6005688e8e4a65da5a1492f9870a048a&id=39684306
-  getRandomPetID() {
-    apiClient.get(
-      '/pet.getRandom?format=json&key=6005688e8e4a65da5a1492f9870a048a&id=39684306'
-    );
-  },
+  getSomePets() {},
   // Get specific pet based on ID
   // 42204862
   getPet(id) {
-    return apiClient.get(
-      '/pet.get?id=' + id + '&key=6005688e8e4a65da5a1492f9870a048a'
-    );
+    return apiClient.get('pokemon/' + id);
   }
 };

@@ -1,8 +1,5 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    {{ pet }}
-  </div>
+  <div class="home">{{ pet.name }}</div>
 </template>
 
 <script>
@@ -18,8 +15,10 @@ export default {
       pet: {}
     };
   },
+
   created() {
-    PetFinderService.getPet(42204862)
+    //api.petfinder.com/pet.getRandom?format=json&key=6005688e8e4a65da5a1492f9870a048a&id=39684306
+    http: PetFinderService.getPet(5)
       .then(response => {
         this.pet = response.data;
       })

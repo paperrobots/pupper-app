@@ -1615,6 +1615,11 @@ brorand@^1.0.1:
   resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
   integrity sha1-EsJe/kCkXjwyPrhnWgoM5XsiNx8=
 
+browser-jsonp@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/browser-jsonp/-/browser-jsonp-1.1.5.tgz#2863c8d9328997ba4163bc2fa4b4db66f6f7479d"
+  integrity sha1-KGPI2TKJl7pBY7wvpLTbZvb3R50=
+
 browserify-aes@^1.0.0, browserify-aes@^1.0.4:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/browserify-aes/-/browserify-aes-1.2.0.tgz#326734642f403dabc3003209853bb70ad428ef48"
@@ -4601,6 +4606,11 @@ is-installed-globally@^0.1.0:
     global-dirs "^0.1.0"
     is-path-inside "^1.0.0"
 
+is-node@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/is-node/-/is-node-1.0.2.tgz#d7d002745ef7debbb7477e988956ab0a4fccb653"
+  integrity sha1-19ACdF733ru3R36YiVarCk/MtlM=
+
 is-npm@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-npm/-/is-npm-1.0.0.tgz#f2fb63a65e4905b406c86072765a1a4dc793b9f4"
@@ -4928,6 +4938,11 @@ jsonify@~0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
   integrity sha1-LHS27kHZPKUbe1qu6PUDYx0lKnM=
+
+jsonp-vue@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/jsonp-vue/-/jsonp-vue-0.0.1.tgz#7606bd43da56e6c185ec52d9d6f0c3a38f47c890"
+  integrity sha1-dga9Q9pW5sGF7FLZ1vDDo49HyJA=
 
 jsonp@^0.2.1:
   version "0.2.1"
@@ -6205,6 +6220,15 @@ performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
+
+petfinder-client@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/petfinder-client/-/petfinder-client-0.0.3.tgz#ba0a5ef3563a6f8f4f6f979b0124b641f8b98461"
+  integrity sha512-LYg9rpmyxFA1O12dT1s30iRKWNiQF+BJ2OtdH8yWLEoq8lK/ohxWxWYjyY09m5Gn9FSd1ONAUHgWx1XWlSxXuQ==
+  dependencies:
+    browser-jsonp "^1.1.5"
+    is-node "^1.0.2"
+    url "^0.11.0"
 
 pify@^2.0.0:
   version "2.3.0"
@@ -8453,6 +8477,11 @@ vue-hot-reload-api@^2.3.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.1.tgz#b2d3d95402a811602380783ea4f566eb875569a2"
   integrity sha512-AA86yKZ5uOKz87/q1UpngEXhbRkaYg1b7HMMVRobNV1IVKqZe8oLIzo6iMocVwZXnYitlGwf2k4ZRLOZlS8oPQ==
+
+vue-jsonp@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/vue-jsonp/-/vue-jsonp-0.1.8.tgz#2cec054b0aca5a9c7de0146b16b2acbeec2d73a7"
+  integrity sha512-ebxvjHl5D7bv5Z7SeRzZUAPOSRMx+RiAeej7h6dPpbtk8MVz/b3n9fOZ8AAVmakb1pe36e+qG0J+K49a3LfpKA==
 
 vue-loader@^15.6.2:
   version "15.6.2"
