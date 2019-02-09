@@ -17,14 +17,7 @@ export default {
   },
   created() {
     //api.petfinder.com/pet.getRandom?format=json&key=6005688e8e4a65da5a1492f9870a048a&id=39684306
-    PetFinderService.getPets()
-      .then(response => {
-        this.pets = response;
-        console.log(response);
-      })
-      .catch(error => {
-        console.log("There was an error:", error.response);
-      });
+    this.pets = PetFinderService.getPets();  
   }
 };
 </script>
