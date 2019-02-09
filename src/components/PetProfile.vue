@@ -6,9 +6,7 @@
 import PetFinderService from "@/services/PetFinderService.js";
 
 export default {
-  props: {
-    pet: Object
-  }
+  props: ["pet"]
 };
 </script>
 
