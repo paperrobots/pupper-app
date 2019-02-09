@@ -1,23 +1,17 @@
 <template>
-  <div class="home">{{ pets }}</div>
+  <div class="home">
+    <PetProfileList/>
+  </div>
 </template>
 
 <script>
 // @ is an alias to /src
-//import HelloWorld from "@/components/HelloWorld.vue";
-//import SinglePet from "@/components/SinglePet.vue";
-import PetFinderService from "@/services/PetFinderService.js";
+import PetProfileList from "@/components/PetProfileList.vue";
 
 export default {
   name: "home",
-  data() {
-    return {
-      pets: {}
-    };
-  },
-  created() {
-    //api.petfinder.com/pet.getRandom?format=json&key=6005688e8e4a65da5a1492f9870a048a&id=39684306
-    this.pets = PetFinderService.getPets();  
+  components: {
+    PetProfileList
   }
 };
 </script>
