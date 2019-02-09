@@ -8,7 +8,17 @@ const apiClient = axios.create({
 export default {
   // Get a list of all pets
   getPets() {
-    return apiClient.get('pokemon/?limit=1000'); // "https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20"
+    var pets = [];
+    return apiClient.get('pokemon/').then(response => {
+      // handle success
+      //console.log(response);
+      response.data.results.forEach(pet => {
+        apiClient.get(pet.url).then(response => {
+          //console.log(response.data);
+          pets.push(response.data);
+        });
+      });
+    }); // "https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20"
   },
   getSomePets() {},
   // Get specific pet based on ID
