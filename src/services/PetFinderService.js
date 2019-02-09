@@ -9,7 +9,7 @@ export default {
   // Get a list of all pets
   getPets() {
     var pets = [];
-    return apiClient.get('pokemon/').then(response => {
+     apiClient.get('pokemon/').then(response => {
       // handle success
       //console.log(response);
       response.data.results.forEach(pet => {
@@ -19,6 +19,7 @@ export default {
         });
       });
     }); // "https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20"
+    return pets;
   },
   getSomePets() {},
   // Get specific pet based on ID
