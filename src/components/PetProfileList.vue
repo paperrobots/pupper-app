@@ -2,6 +2,8 @@
   <div>
     <li v-for="(pet, index) in pets" :key="index">
       <PetProfile :pet="pet"/>
+      <VoteButton type="like"/>
+      <VoteButton type="dislike"/>
     </li>
   </div>
 </template>
@@ -9,11 +11,13 @@
 <script>
 import PetFinderService from "@/services/PetFinderService.js";
 import PetProfile from "@/components/PetProfile.vue";
+import VoteButton from "@/components/VoteButton.vue";
 
 export default {
   name: "PetProfileList",
   components: {
-    PetProfile
+    PetProfile,
+    VoteButton
   },
   data() {
     return {
@@ -28,4 +32,7 @@ export default {
 </script>
 
 <style scoped>
+li {
+  list-style: none;
+}
 </style>
