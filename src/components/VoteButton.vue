@@ -17,12 +17,13 @@ button {
   background: none;
   color: black;
   margin: 1rem;
+  transition: all 0.3s ease;
 
   &.like {
     border-color: greenyellow;
 
     &:hover {
-      box-shadow: 0px 0px 5px rgba(greenyellow, 0.9);
+      box-shadow: 0px 0px 20px rgba(greenyellow, 0.9);
     }
   }
 
@@ -30,8 +31,12 @@ button {
     border-color: tomato;
 
     &:hover {
-      box-shadow: 0px 0px 5px rgba(tomato, 0.9);
+      box-shadow: 0px 0px 20px rgba(tomato, 0.7);
     }
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 </style>
