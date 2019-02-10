@@ -3,8 +3,8 @@
     <li v-for="(pet, index) in pets" :key="index">
       <PetProfile :pet="pet"/>
       <div class="voting">
-        <VoteButton type="like" @click.native="like(pet.id)"/>
-        <VoteButton @click.native="dislike(pet.id)" type="dislike"/>
+        <VoteButton @click.native="vote(true, pet.id)" type="like"/>
+        <VoteButton @click.native="vote(false, pet.id)" type="dislike"/>
       </div>
     </li>
   </div>
@@ -31,13 +31,11 @@ export default {
     this.pets = PetFinderService.getPets();
   },
   methods: {
-    like(petID) {
-      //TODO: pass that to the database and member profile
-      console.log("Good Boy " + petID);
-    },
-    dislike(petID) {
-      //TODO: add to data base with date that expires after so long so pet will go back into rotation
-      console.log("Still a Good Boy just not my Good Boy " + petID);
+    vote(liked, petID) {
+      //TODO: Add to database; if liked is not truthy add an expiration date to put the pet back in rotation
+      //TODO: Remove element from Dom
+      var LikedText = liked === true ? "Liked" : "Disliked";
+      console.log(LikedText + " Pet #" + petID);
     }
   }
 };
